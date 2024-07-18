@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrices</title>
+    <link rel="stylesheet" href="matrix.css">
+    <style></style>
+    <script defer src="matrix.js"></script>
+</head>
+<body>
+    <h1>Matrix</h1>
+    <div class="main">
+        <label for="columns">Columns: 
+            <input type="number" class="c1" name="c1" min="1">
+        </label>
+        <br><br>
+        <label for="rows">Rows:  
+            <input type="number" class="r1" name="r1" min="1">
+        </label>
+        <br><br>
+        <button id="multiply-button" onclick="multiply()">Multiply</button>
+        <h5 id="result"></h5>
+        <button id="create-matrix-button" onclick="displayMatrix()">Create Matrix</button>
+        <div id="matrix-container"></div>
+    </div>
+</body>
+</html>
