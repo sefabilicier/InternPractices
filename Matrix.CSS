@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-        table {
-            margin-top: 20px;
-            border-collapse: collapse;
-        }
-        td {
-            border: 1px solid black;
-            width: 30px;
-            height: 30px;
-            text-align: center;
-        }
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin-right: 20px;
+}
+td {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+    .matrix-container {
+    display: flex;
+}
