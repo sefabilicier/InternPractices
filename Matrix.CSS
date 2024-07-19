@@ -1,15 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
-table {
-    margin-top: 20px;
-    border-collapse: collapse;
-    margin-right: 20px;
+body {
+    font-family: "Inter Tight", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+
+    /*centering everyting*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9ba8b9;
 }
-td {
-    border: 1px solid black;
-    width: 30px;
+
+h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+input[type="number"] {
+    width: 60px;
     height: 30px;
+    font-size: 1rem;
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 1px;
     text-align: center;
 }
-    .matrix-container {
-    display: flex;
+
+button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #9ba8b9git;
+    transform: scale(1.05);
+    animation: button-hover-animation 1s ease-in-out;
 }

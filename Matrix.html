@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrices</title>
     <link rel="stylesheet" href="matrix.css">
-    <style></style>
+    <link rel="stylesheet" href="matrixJS.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+    <style>
+
+    </style>
     <script defer src="matrix.js"></script>
 </head>
 <body>
-    <h1>Matrix</h1>
-    <div class="main">
-        <label for="columns">Columns: 
-            <input type="number" class="c1" name="c1" min="1">
-        </label>
-        <br><br>
-        <label for="rows">Rows:  
-            <input type="number" class="r1" name="r1" min="1">
-        </label>
-        <br><br>
-        <button id="multiply-button" onclick="multiply()">Multiply</button>
-        <h5 id="result"></h5>
-        <button id="create-matrix-button" onclick="displayMatrix()">Create Matrices</button>
-        <div id="matrix-container" class="matrix-container"></div>
-        <br>
-        <button id="multiply-matrix-button" onclick="multiplyMatrix()"> Multiply matrix </button>
-        <div id="matrix-multiply" class="matrix-multiply"></div>
+    <div class="container">
+        <h1>Matrix</h1>
+        <div class="main">
+            <label for="columns">Columns: 
+                <input type="number" class="c1" name="c1" min="1">
+            </label>
+            <br><br>
+            <label for="rows">Rows:  
+                <input type="number" class="r1" name="r1" min="1">
+            </label>
+            <br><br>
+            <button id="multiply-button" onclick="multiply()">Multiply</button>
+            <h5 id="result"></h5>
+            <button id="create-matrix-button" onclick="displayMatrix()">Create Matrices</button>
+            <div id="matrix-container" class="matrix-container"></div>
+            <br>
+            <button id="multiply-matrix-button" onclick="multiplyMatrix()">Multiply Matrix</button>
+            <div id="matrix-multiply" class="matrix-multiply"></div>
+        </div>
     </div>
 </body>
 </html>

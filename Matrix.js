@@ -1,10 +1,8 @@
-
 document.addEventListener('DOMContentLoaded', (event) => {
     document.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
             multiply();
             displayMatrix();
-            multiplyMatrix();
         }
     });
 });
@@ -23,10 +21,9 @@ function displayMatrix() {
 
     matrixContainer.innerHTML = '';
 
-    //this is where we get 2 matrix as an output!!!!
-    function createTable(columns, rows) {
+    function createTable(columns, rows, tableIndex) {
         let table = document.createElement('table');
-    
+        table.id = `matrix-${tableIndex}`;
         for (let i = 0; i < rows; i++) {
             let tr = document.createElement('tr');
             for (let j = 0; j < columns; j++) {
@@ -34,24 +31,21 @@ function displayMatrix() {
                 let input = document.createElement('input');
                 input.type = 'text';
                 input.className = 'matrix-input';
-                input.style.width = '100%'; 
-                input.style.height = '100%'; 
-                tr.appendChild(input);
+                input.style.width = '100%';
+                input.style.height = '100%';
+                td.appendChild(input);
                 tr.appendChild(td);
             }
             table.appendChild(tr);
         }
         return table;
-        
     }
 
-    let table = createTable(columns, rows);
-    let table2 = createTable(columns, rows);
+    let table1 = createTable(columns, rows, 1);
+    let table2 = createTable(columns, rows, 2);
 
-    
-    matrixContainer.appendChild(table);
+    matrixContainer.appendChild(table1);
     matrixContainer.appendChild(table2);
-
 }
 
 function multiplyMatrix() {
@@ -59,6 +53,37 @@ function multiplyMatrix() {
     let rows = document.getElementsByName("r1")[0].value;
     let matrixMultiply = document.getElementById("matrix-multiply");
 
-    matrixMultiply.innerText = '';
-    console.log("hi");
+    matrixMultiply.innerHTML = '';
+
+    let table1 = document.getElementById('matrix-1');
+    let table2 = document.getElementById('matrix-2');
+    let resultTable = document.createElement('table');
+
+    for (let i = 0; i < rows; i++) {
+        let tr = document.createElement('tr');
+        for (let j = 0; j < columns; j++) {
+            let td = document.createElement('td');
+            let input1 = table1.rows[i].cells[j].querySelector('input').value;
+            let input2 = table2.rows[i].cells[j].querySelector('input').value;
+
+            let result = parseFloat(input1) * parseFloat(input2);
+            if (isNaN(result)) result = 0;
+
+            let resultInput = document.createElement('input');
+            resultInput.type = 'text';
+            resultInput.className = 'matrix-input';
+            resultInput.style.width = '100%';
+            resultInput.style.height = '100%';
+            resultInput.value = result;
+
+            let resultLog = document.createElement('p')
+            resultLog.className = 'multiply-log'
+
+            td.appendChild(resultInput);
+            tr.appendChild(td);
+        }
+        resultTable.appendChild(tr);
+    }
+    
+    matrixMultiply.appendChild(resultTable);
 }

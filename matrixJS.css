@@ -1,0 +1,34 @@
+/*js to CSS*/
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+    margin-right: 20px;
+}
+td {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+    .matrix-container {
+    display: flex;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.matrix-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.matrix-multiply {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
