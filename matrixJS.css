@@ -32,3 +32,13 @@ td {
     margin-top: 20px;
 }
 
+
+/*after the matrices created take a gap*/
+.matrix-table {
+    margin: 50px;
+    
+}
+
+.matrix-table td {
+    border: 1px solid rgb(255, 255, 255); 
+}

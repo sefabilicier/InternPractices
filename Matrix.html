@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrices</title>
+    <i class="fa-solid fa-xmark"></i>
     <link rel="stylesheet" href="matrix.css">
     <link rel="stylesheet" href="matrixJS.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,22 +13,48 @@
     <style>
 
     </style>
-    <script defer src="matrix.js"></script>
+    <script defer src="Matrix2.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1>Matrix</h1>
+        <h1 class="fonted">Matrix<span>X</span>y</h1>
         <div class="main">
-            <label for="columns">Columns: 
-                <input type="number" class="c1" name="c1" min="1">
-            </label>
+            <div class="first-matrix-1">
+                1st matrix
+                <br><br>
+                <div class="first-matrix">
+                    <label for="columns">Rows: 
+                        <input type="number" class="r1" name="r1">
+                    </label>
+                    <br><br>
+                    <label for="rows">Columns:  
+                        <input type="number" class="c1" name="c1">
+                    </label>
+                    <br><br>
+                </div>
+            </div>
+            <div class="second-matrix-2">
+                <br><br>
+                2nd matrix
+                <div class="second-matrix">
+                    <br><br>
+                    <label for="row2">Rows: 
+                        <input type="number" class="r2" name="r2" readonly onmouseover="syncFirstColToSecondRows()" onmouseleave="magic()">
+                    </label>
+                    <br><br>
+                    <label for="column2">Columns:  
+                        <input type="number" class="c2" name="c2" >
+                    </label>
+                    <br><br>
+                </div>
+            </div>
             <br><br>
-            <label for="rows">Rows:  
-                <input type="number" class="r1" name="r1" min="1">
-            </label>
-            <br><br>
-            <button id="multiply-button" onclick="multiply()">Multiply</button>
-            <h5 id="result"></h5>
+            <button id="multiply-button" onclick="multiply()"> Multiply </button>
+            <br>
+            <div id="result1"></div>
+            <br>
+            <div id="result2"></div>
+            <br>
             <button id="create-matrix-button" onclick="displayMatrix()">Create Matrices</button>
             <div id="matrix-container" class="matrix-container"></div>
             <br>
